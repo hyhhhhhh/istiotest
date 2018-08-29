@@ -17,7 +17,7 @@ jobs:
     #### expecting it in the form of
     ####   /go/src/github.com/circleci/go-tool
     ####   /go/src/bitbucket.org/circleci/go-tool
-    working_directory: /go/src/github.com/.circleci
+    working_directory: /go/src/github.com/istio
     environment:
             - GOPATH: /go
     steps:
@@ -27,6 +27,7 @@ jobs:
          command: |
            echo 'Hello World!'
            echo 'This is the delivery pipeline'
+           cd .circle
            go version
            pwd
            ls
